@@ -4,3 +4,19 @@ services:
         build:
             context: api
             dockerfile: Dockerfile
+    curl-test:
+        build:
+            context: curl-test
+            dockerfile: Dockerfile
+        depends_on: 
+            - api
+        links: 
+            - api
+        tty: true
+    network-test:
+        build:
+            context: network-test
+        depends_on: 
+            - api
+        links: 
+            - api
