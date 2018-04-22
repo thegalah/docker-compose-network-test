@@ -5,6 +5,7 @@ services:
             context: api
             dockerfile: Dockerfile
     curl-test:
+        image: curl-test
         build:
             context: curl-test
             dockerfile: Dockerfile
