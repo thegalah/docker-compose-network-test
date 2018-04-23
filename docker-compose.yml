@@ -25,3 +25,7 @@ services:
             - api
         links: 
             - api
+networks:
+    default:
+        external:
+            name: docker-network-test
